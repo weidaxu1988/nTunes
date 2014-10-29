@@ -1,8 +1,7 @@
 fileFormatVersion: 2
-guid: a7a3a87070d77cc43a654da088624c1a
+guid: d134e4ebccba30242a993410d7d3e577
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: ele-board_0
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0

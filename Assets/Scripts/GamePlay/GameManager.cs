@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     Player mPlayer;
     public Player CurPlayer
     {
+        set { mPlayer = value; }
         get { return mPlayer; }
     }
 

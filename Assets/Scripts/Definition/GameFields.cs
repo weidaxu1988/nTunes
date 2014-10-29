@@ -9,4 +9,8 @@ public class GameFields : MonoBehaviour
     public const string CONFIRM_SCENE_STR = "3_ConfirmScene";
     public const string MAIN_SCENE_STR = "4_MainScene";
     public const string SUMMARY_SCENE_STR = "5_SummaryScene";
+    public const string PROFILE_HEAD = "profile_";
+    
+    public const int PROFILE_COUNT = 5;
+
 }

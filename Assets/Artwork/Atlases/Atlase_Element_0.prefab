@@ -42,7 +42,7 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 2d83ce46a615caf44a378beaaec0b6ba, type: 2}
   mSprites:
   - name: ele-beat
-    x: 1908
+    x: 1915
     y: 1925
     width: 123
     height: 123
@@ -55,8 +55,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-beat_cycle_1
-    x: 418
-    y: 157
+    x: 1815
+    y: 1374
     width: 160
     height: 160
     borderLeft: 0
@@ -68,8 +68,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-beat_cycle_2
-    x: 626
-    y: 311
+    x: 0
+    y: 1013
     width: 156
     height: 156
     borderLeft: 0
@@ -81,8 +81,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-beat_cycle_3
-    x: 783
-    y: 311
+    x: 157
+    y: 1013
     width: 156
     height: 156
     borderLeft: 0
@@ -94,8 +94,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-beat_cycle_4
-    x: 254
-    y: 154
+    x: 1651
+    y: 1371
     width: 163
     height: 163
     borderLeft: 0
@@ -107,47 +107,73 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-board_0
-    x: 1025
-    y: 1632
-    width: 882
-    height: 416
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
+    x: 1763
+    y: 1326
+    width: 48
+    height: 44
+    borderLeft: 10
+    borderRight: 10
+    borderTop: 10
+    borderBottom: 10
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
   - name: ele-board_1
-    x: 0
-    y: 768
-    width: 1024
-    height: 551
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
+    x: 1815
+    y: 1330
+    width: 46
+    height: 43
+    borderLeft: 13
+    borderRight: 12
+    borderTop: 12
+    borderBottom: 11
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
   - name: ele-board_2
-    x: 626
-    y: 695
-    width: 335
-    height: 72
-    borderLeft: 0
-    borderRight: 0
-    borderTop: 0
-    borderBottom: 0
+    x: 1862
+    y: 1337
+    width: 44
+    height: 36
+    borderLeft: 14
+    borderRight: 12
+    borderTop: 13
+    borderBottom: 11
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ele-board_3
+    x: 445
+    y: 612
+    width: 107
+    height: 108
+    borderLeft: 10
+    borderRight: 10
+    borderTop: 10
+    borderBottom: 10
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ele-board_4
+    x: 117
+    y: 610
+    width: 109
+    height: 110
+    borderLeft: 10
+    borderRight: 10
+    borderTop: 10
+    borderBottom: 10
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-back
-    x: 626
-    y: 29
+    x: 238
+    y: 731
     width: 116
     height: 111
     borderLeft: 0
@@ -159,8 +185,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-back-pressed
-    x: 1025
-    y: 1208
+    x: 0
+    y: 609
     width: 116
     height: 111
     borderLeft: 0
@@ -172,8 +198,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-cancel-pressed
-    x: 693
-    y: 468
+    x: 24
+    y: 540
     width: 66
     height: 68
     borderLeft: 0
@@ -185,8 +211,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-canel
-    x: 626
-    y: 468
+    x: 1976
+    y: 1322
     width: 66
     height: 68
     borderLeft: 0
@@ -198,8 +224,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-confirm
-    x: 796
-    y: 6
+    x: 472
+    y: 731
     width: 116
     height: 111
     borderLeft: 0
@@ -211,8 +237,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-confirm-pressed
-    x: 796
-    y: 118
+    x: 355
+    y: 731
     width: 116
     height: 111
     borderLeft: 0
@@ -224,8 +250,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-easy
-    x: 254
-    y: 65
+    x: 354
+    y: 843
     width: 160
     height: 88
     borderLeft: 0
@@ -237,8 +263,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-fb
-    x: 1282
-    y: 1248
+    x: 433
+    y: 941
     width: 69
     height: 71
     borderLeft: 0
@@ -250,8 +276,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-fb-pressed
-    x: 872
-    y: 239
+    x: 1976
+    y: 1391
     width: 69
     height: 71
     borderLeft: 0
@@ -263,8 +289,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-g+
-    x: 942
-    y: 239
+    x: 1976
+    y: 1463
     width: 69
     height: 71
     borderLeft: 0
@@ -276,8 +302,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-gp-pressed
-    x: 940
-    y: 324
+    x: 503
+    y: 941
     width: 69
     height: 71
     borderLeft: 0
@@ -289,8 +315,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-hard
-    x: 626
-    y: 141
+    x: 184
+    y: 843
     width: 169
     height: 88
     borderLeft: 0
@@ -302,8 +328,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-menu
-    x: 1915
-    y: 1388
+    x: 0
+    y: 721
     width: 118
     height: 121
     borderLeft: 0
@@ -315,8 +341,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-menu-pressed
-    x: 872
-    y: 496
+    x: 1905
+    y: 1555
     width: 118
     height: 121
     borderLeft: 0
@@ -328,8 +354,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-mid
-    x: 418
-    y: 68
+    x: 0
+    y: 843
     width: 183
     height: 88
     borderLeft: 0
@@ -341,8 +367,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-play
-    x: 913
-    y: 8
+    x: 227
+    y: 611
     width: 108
     height: 109
     borderLeft: 0
@@ -354,8 +380,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-play-medium
-    x: 626
-    y: 537
+    x: 0
+    y: 932
     width: 245
     height: 80
     borderLeft: 0
@@ -367,8 +393,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-play-medium-pressed
-    x: 626
-    y: 230
+    x: 314
+    y: 1089
     width: 245
     height: 80
     borderLeft: 0
@@ -380,8 +406,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-play-pressed
-    x: 913
-    y: 120
+    x: 336
+    y: 611
     width: 108
     height: 109
     borderLeft: 0
@@ -393,8 +419,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-reload
-    x: 1908
-    y: 1694
+    x: 119
+    y: 721
     width: 118
     height: 121
     borderLeft: 0
@@ -407,7 +433,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: ele-btn-reload-pressed
     x: 1915
-    y: 1510
+    y: 1803
     width: 118
     height: 121
     borderLeft: 0
@@ -419,8 +445,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-send_msg
-    x: 813
-    y: 641
+    x: 314
+    y: 1035
     width: 186
     height: 53
     borderLeft: 0
@@ -432,8 +458,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-send_msg-pressed
-    x: 626
-    y: 641
+    x: 246
+    y: 959
     width: 186
     height: 53
     borderLeft: 0
@@ -445,8 +471,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-twitter
-    x: 1142
-    y: 1248
+    x: 515
+    y: 860
     width: 69
     height: 71
     borderLeft: 0
@@ -458,8 +484,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-btn-twitter-pressed
-    x: 1212
-    y: 1248
+    x: 553
+    y: 649
     width: 69
     height: 71
     borderLeft: 0
@@ -485,7 +511,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: ele-icon-ntunes
     x: 1025
-    y: 1369
+    y: 1786
     width: 889
     height: 262
     borderLeft: 0
@@ -497,8 +523,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-icon-profile
-    x: 0
-    y: 67
+    x: 1651
+    y: 1535
     width: 253
     height: 250
     borderLeft: 0
@@ -510,8 +536,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-number
-    x: 1908
-    y: 1816
+    x: 1905
+    y: 1677
     width: 133
     height: 108
     borderLeft: 0
@@ -523,8 +549,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-scroll-bg
-    x: 1025
-    y: 836
+    x: 0
+    y: 237
     width: 23
     height: 371
     borderLeft: 0
@@ -536,8 +562,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-scroll-thumb
-    x: 991
-    y: 511
+    x: 2024
+    y: 1570
     width: 21
     height: 106
     borderLeft: 0
@@ -549,8 +575,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-title_1
-    x: 0
-    y: 468
+    x: 1025
+    y: 1486
     width: 625
     height: 149
     borderLeft: 0
@@ -563,7 +589,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: ele-title_2
     x: 0
-    y: 318
+    y: 1170
     width: 625
     height: 149
     borderLeft: 0
@@ -575,8 +601,21 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: ele-title_3
-    x: 0
-    y: 618
+    x: 1025
+    y: 1336
+    width: 625
+    height: 149
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: ele-title_4
+    x: 1025
+    y: 1636
     width: 625
     height: 149
     borderLeft: 0
@@ -588,8 +627,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: item-energy
-    x: 743
-    y: 66
+    x: 573
+    y: 938
     width: 48
     height: 74
     borderLeft: 0
@@ -601,8 +640,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: item-heart
-    x: 940
-    y: 396
+    x: 501
+    y: 1017
     width: 76
     height: 71
     borderLeft: 0
@@ -614,8 +653,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: item-shield
-    x: 962
-    y: 695
+    x: 560
+    y: 1097
     width: 62
     height: 72
     borderLeft: 0
@@ -627,8 +666,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: label-name
-    x: 1908
-    y: 1665
+    x: 1651
+    y: 1342
     width: 111
     height: 28
     borderLeft: 0
