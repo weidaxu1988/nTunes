@@ -7,6 +7,8 @@ public class FriendItem : MonoBehaviour
     public UILabel mNameLabel;
     public UILabel mScoreLabel;
 
+	public TweenAlpha mAlpha;
+
     Friend mFriend;
 
     public void SetFriend(Friend f)
@@ -15,6 +17,14 @@ public class FriendItem : MonoBehaviour
         UpdateContent();
 
     }
+
+	public void Fadding(bool fade)
+	{
+		if (fade)
+						mAlpha.PlayForward ();
+		else
+			mAlpha.PlayReverse ();
+		}
 
     public void UpdateContent()
     {
@@ -37,4 +47,9 @@ public class FriendItem : MonoBehaviour
     {
         mScoreLabel.text = "" + s;
     }
+
+	public void OnInviteBtnClick()
+	{
+		Debug.Log ("invite friend");
+	}
 }

@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class SongNoteController : MonoBehaviour
 {
+	public int[] yPositions;
+
     List<SongNote> noteList = new List<SongNote>();
 
     void Awake()
@@ -46,7 +48,10 @@ public class SongNoteController : MonoBehaviour
             if (n.StringIndex > 3) continue;
 
             SongNote note = GameFactory.GetSongNote(gameObject, n);
-            note.transform.localPosition = new Vector3(DisplaySize.NGUIWidth, -n.StringIndex * 150, 0);
+			//note.transform.localPosition = new Vector3(-n.StringIndex * 150, DisplaySize.NGUIHeight, 0);
+
+			note.transform.localPosition = new Vector3(yPositions[n.StringIndex], DisplaySize.NGUIHeight, 0);
+
             note.gameObject.SetActive(false);
             noteList.Add(note);
         }

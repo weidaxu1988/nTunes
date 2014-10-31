@@ -1,6 +1,6 @@
 ﻿public class Friend
 {
-    protected readonly int mPlayerId;
+    public readonly int mPlayerId;
 
     protected int mProfileIndex = 0;
     protected string mName = "unknow player";

@@ -27,7 +27,7 @@ public class SongNote : MonoBehaviour
         float progress = (mNote.Time - mPlayer.GetCurrentBeat() - 0.5f) / 6f;
 
         Vector3 pos = transform.localPosition;
-        pos.x = progress * CombatManager.Instance.speed - DisplaySize.NGUIWidth / 1.1f;
+        pos.y = progress * CombatManager.Instance.speed - DisplaySize.NGUIHeight / 1.1f;
         transform.localPosition = pos;
     }
 
@@ -68,7 +68,7 @@ public class SongNote : MonoBehaviour
 
     bool WasNoteMissed()
     {
-        return transform.localPosition.x < -700;
+        return transform.localPosition.y < -690;
         //Debug.Log(transform.localPosition.x + " is missed: " + !(transform.localPosition.x > -807 && transform.localPosition.x < 802));
         //return !(transform.localPosition.x > -807 && transform.localPosition.x < 802);
     }
@@ -109,7 +109,7 @@ public class SongNote : MonoBehaviour
 
     bool IsInHitZone()
     {
-        return transform.localPosition.x > -630 && transform.localPosition.x < -500;
+        return transform.localPosition.y < -550 && transform.localPosition.y > -680;
     }
 
     void SetSprite(int index)
