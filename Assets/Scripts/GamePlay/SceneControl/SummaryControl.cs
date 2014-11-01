@@ -6,13 +6,13 @@ public class SummaryControl : MonoBehaviour
     public void OnReplayBtnClick()
     {
         Debug.Log("reload confirm scene");
-        LoadingManager.Instance.LoadConfirmScene();
+        GameManager.Instance.LoadConfirmScene();
     }
 
     public void OnbackBtnClick()
     {
         Debug.Log("back to menu scene");
-        LoadingManager.Instance.LoadMenuScene();
+        GameManager.Instance.LoadMenuScene();
     }
 
 }

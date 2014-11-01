@@ -142,7 +142,7 @@ public class CombatManager : MonoBehaviour
     {
         Debug.Log("finished");
         Debug.Log("Load summary Scene");
-        LoadingManager.Instance.LoadSummaryScene();
+        GameManager.Instance.LoadSummaryScene();
     }
 
     void ResetHasHitNoteOnStringIndexArray()

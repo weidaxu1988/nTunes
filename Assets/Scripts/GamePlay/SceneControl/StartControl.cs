@@ -9,6 +9,6 @@ public class StartControl : MonoBehaviour
         //if (GameManager.Instance.CurPlayer)
         //    LoadingManager.Instance.LoadMenuScene();
         //else
-        LoadingManager.Instance.LoadCharCreationScene();
+        GameManager.Instance.LoadCharCreationScene();
     }
 }

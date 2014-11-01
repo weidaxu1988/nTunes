@@ -6,10 +6,21 @@ public class FriendItem : MonoBehaviour
     public UISprite mIconSprite;
     public UILabel mNameLabel;
     public UILabel mScoreLabel;
+    public UILabel statusLabel;
+    public GameObject inviteBtn;
+    public GameObject invitedLabel;
 
-	public TweenAlpha mAlpha;
+    public TweenAlpha mAlpha;
 
     Friend mFriend;
+
+    void OnEnable()
+    {
+        if (inviteBtn)
+            inviteBtn.SetActive(true);
+        if (invitedLabel)
+            invitedLabel.SetActive(false);
+    }
 
     public void SetFriend(Friend f)
     {
@@ -18,19 +29,20 @@ public class FriendItem : MonoBehaviour
 
     }
 
-	public void Fadding(bool fade)
-	{
-		if (fade)
-						mAlpha.PlayForward ();
-		else
-			mAlpha.PlayReverse ();
-		}
+    public void Fadding(bool fade)
+    {
+        if (fade)
+            mAlpha.PlayForward();
+        else
+            mAlpha.PlayReverse();
+    }
 
     public void UpdateContent()
     {
         SetProfile(mFriend.ProfileIndex);
         SetName(mFriend.Name);
         SetScore(mFriend.Score);
+        SetStatus();
     }
 
     void SetProfile(int i)
@@ -45,11 +57,26 @@ public class FriendItem : MonoBehaviour
 
     void SetScore(int s)
     {
-        mScoreLabel.text = "" + s;
+        if (mScoreLabel)
+            mScoreLabel.text = "" + s;
     }
 
-	public void OnInviteBtnClick()
-	{
-		Debug.Log ("invite friend");
-	}
+    void SetStatus()
+    {
+
+    }
+
+    public void OnInviteBtnClick()
+    {
+        if (GameManager.Instance.CurGame.AddFriend(mFriend))
+        {
+            inviteBtn.SetActive(false);
+            invitedLabel.SetActive(true);
+        }
+        else
+        {
+            GameManager.Instance.SetWarningContent("invited more than 2 friends");
+        }
+
+    }
 }

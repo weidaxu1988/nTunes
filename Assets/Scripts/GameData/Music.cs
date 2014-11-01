@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Music : MonoBehaviour {
+public class Music {
 	protected readonly int mMusicId;
 	
 	protected int mProfileIndex = 0;

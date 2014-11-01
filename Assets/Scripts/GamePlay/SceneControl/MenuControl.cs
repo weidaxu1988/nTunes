@@ -3,39 +3,39 @@ using System.Collections;
 
 public class MenuControl : MonoBehaviour
 {
-		public enum MenuState
-		{
-				Friend,
-				Music,
-		}
+    public enum MenuState
+    {
+        Friend,
+        Music,
+    }
 
-		public MenuState menuState = MenuState.Friend;
-		public TweenPosition tweenPos;
+    public MenuState menuState = MenuState.Friend;
+    public TweenPosition tweenPos;
 
-	public FriendControl friendControl;
-	public MusicControl musicControl;
+    public FriendControl friendControl;
+    public MusicControl musicControl;
 
-		void Start ()
-		{
-				SetMenu (menuState);
-		}
+    void OnEnable()
+    {
+        SetMenu(menuState);
+    }
 
-		public void SetMenu (MenuState s)
-		{
+    public void SetMenu(MenuState s)
+    {
+        menuState = s;
 
-				menuState = s;
+        if (menuState == MenuState.Friend)
+        {
+            tweenPos.PlayReverse();
+            friendControl.SetMenuActive(true);
+            musicControl.SetMenuActive(false);
 
-				if (menuState == MenuState.Friend) {
-						tweenPos.PlayReverse ();
-			friendControl.SetMenuActive(true);
-			musicControl.SetMenuActive(false);
-
-				} else {
-						tweenPos.PlayForward ();
-			friendControl.SetMenuActive(false);
-			musicControl.SetMenuActive(true);
-				}
-
-		}
-
+        }
+        else
+        {
+            tweenPos.PlayForward();
+            friendControl.SetMenuActive(false);
+            musicControl.SetMenuActive(true);
+        }
+    }
 }

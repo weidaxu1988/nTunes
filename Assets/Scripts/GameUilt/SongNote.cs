@@ -39,7 +39,7 @@ public class SongNote : MonoBehaviour
     public void SetNote(Note noteData)
     {
         mNote = noteData;
-        //SetSprite(mNote.StringIndex);
+        SetSprite(mNote.StringIndex);
     }
 
     public void CheckHit()
@@ -118,16 +118,16 @@ public class SongNote : MonoBehaviour
         switch (index)
         {
             case 0:
-                sprite.spriteName = "ele-beat_cycle_1";
+                sprite.spriteName = "ele-beat_1";
                 break;
             case 1:
-                sprite.spriteName = "ele-beat_cycle_2";
+                sprite.spriteName = "ele-beat_2";
                 break;
             case 2:
-                sprite.spriteName = "ele-beat_cycle_3";
+                sprite.spriteName = "ele-beat_3";
                 break;
             case 3:
-                sprite.spriteName = "ele-beat_cycle_4";
+                sprite.spriteName = "ele-beat_4";
                 break;
         }
     }

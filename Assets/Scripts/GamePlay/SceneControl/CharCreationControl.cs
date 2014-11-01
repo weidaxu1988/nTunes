@@ -10,7 +10,7 @@ public class CharCreationControl : MonoBehaviour
     {
         if (CreatePlayer())
         {
-            LoadingManager.Instance.LoadMenuScene();
+            GameManager.Instance.LoadMenuScene();
             Debug.Log("Load menu scene!");
         }
     }
@@ -21,7 +21,7 @@ public class CharCreationControl : MonoBehaviour
         //if (GameManager.Instance.CurPlayer)
         //    LoadingManager.Instance.LoadMenuScene();
         //else
-        LoadingManager.Instance.LoadStartScene();
+        GameManager.Instance.LoadStartScene();
     }
 
     bool CreatePlayer()
@@ -31,11 +31,14 @@ public class CharCreationControl : MonoBehaviour
         string name = mNameInput.value;
         if (!string.IsNullOrEmpty(name))
         {
-            Player p = new Player(0, name);            
-            //set profile
-            p.ProfileIndex = mObjectFinder.centeredObject.GetComponent<ProfileIcon>().profileIndex;
+            GameManager.Instance.SetCurPlayer(0, name, mObjectFinder.centeredObject.GetComponent<ProfileIcon>().profileIndex);
 
-            GameManager.Instance.CurPlayer = p;
+            //Move to GameManager
+
+            //Player p = new Player(0, name);            
+            //set profile
+            //p.ProfileIndex = mObjectFinder.centeredObject.GetComponent<ProfileIcon>().profileIndex;
+            //GameManager.Instance.CurPlayer = p;
             result = true;
         }
 

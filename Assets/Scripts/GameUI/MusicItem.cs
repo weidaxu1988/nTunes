@@ -11,7 +11,7 @@ public class MusicItem : MonoBehaviour
 	
 	Music mMusic;
 	
-	public void SetFriend(Music m)
+	public void SetMusic(Music m)
 	{
 		mMusic = m;
 		UpdateContent();
@@ -35,7 +35,7 @@ public class MusicItem : MonoBehaviour
 	
 	void SetProfile(int i)
 	{
-		mIconSprite.spriteName = GameFields.PROFILE_HEAD + i;
+		mIconSprite.spriteName = GameFields.ALBUM_HEAD + i;
 	}
 	
 	void SetName(string n)
@@ -50,8 +50,8 @@ public class MusicItem : MonoBehaviour
 
     public void OnPlayBtnClick()
     {
-        Debug.Log("Load confirm scene");
-        LoadingManager.Instance.LoadConfirmScene();
+        GameManager.Instance.CurGame.music = mMusic;
+        GameManager.Instance.LoadConfirmScene();
     }
 
 }

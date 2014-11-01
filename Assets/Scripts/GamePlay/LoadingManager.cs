@@ -3,18 +3,18 @@ using System.Collections;
 
 public class LoadingManager : MonoBehaviour
 {
-    static private LoadingManager _singleton;
-    static public LoadingManager Instance
-    {
-        get
-        {
-            if (_singleton == null)
-            {
-                _singleton = (LoadingManager)FindObjectOfType(typeof(LoadingManager));
-            }
-            return _singleton;
-        }
-    }
+    //static private LoadingManager _singleton;
+    //static public LoadingManager Instance
+    //{
+    //    get
+    //    {
+    //        if (_singleton == null)
+    //        {
+    //            _singleton = (LoadingManager)FindObjectOfType(typeof(LoadingManager));
+    //        }
+    //        return _singleton;
+    //    }
+    //}
 
     private AsyncOperation mAsync;
     //private float mProgess = 0;

@@ -2,32 +2,35 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class FriendControl : MonoBehaviour {
-	public GameObject clickArea;
+public class FriendControl : MonoBehaviour
+{
+    public GameObject clickArea;
+    public GameObject friendParent;
 
-	List<FriendItem> friendList = new List<FriendItem>();
+    Dictionary<Friend, FriendItem> friendDict = new Dictionary<Friend, FriendItem>();
 
-	MenuControl.MenuState state = MenuControl.MenuState.Friend;
+    void Start()
+    {
+        buildFriendList();
+    }
 
-	void Start()
-	{
-		CreateFriendItems ();
-	}
+    public void SetMenuActive(bool active)
+    {
+        clickArea.SetActive(!active);
+        foreach (FriendItem item in friendDict.Values)
+        {
+            item.Fadding(!active);
+        }
+    }
 
-	void CreateFriendItems()
-	{
-		FriendItem[] friends = GetComponentsInChildren<FriendItem> ();
-		friendList.AddRange (friends);
-	}
-
-	public void SetMenuActive(bool active)
-	{
-		clickArea.SetActive(!active);
-		foreach (FriendItem item in friendList) {
-			item.Fadding(!active);
-
-
-				}
-	}
+    void buildFriendList()
+    {
+        foreach (Friend f in GameManager.Instance.CurPlayer.friendList)
+        {
+            FriendItem item = GameFactory.GetFriendItem(friendParent, f);
+            friendDict.Add(f, item);
+        }
+        friendParent.GetComponent<UIGrid>().Reposition();
+    }
 
 }

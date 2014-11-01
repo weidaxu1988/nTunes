@@ -8,4 +8,25 @@ public class GameFactory {
         note.SetNote(noteData);
         return note;
     }
+
+    public static FriendItem GetFriendStatusItem(GameObject container, Friend f)
+    {
+        FriendItem item = NGUITools.AddChild(container, (GameObject)Resources.Load("Prefabs/" + "GameUI/" + "Item-FriendStatus")).GetComponent<FriendItem>();
+        item.SetFriend(f);
+        return item;
+    }
+
+    public static FriendItem GetFriendItem(GameObject container, Friend f)
+    {
+        FriendItem item = NGUITools.AddChild(container, (GameObject)Resources.Load("Prefabs/" + "GameUI/" + "Item-Friend")).GetComponent<FriendItem>();
+        item.SetFriend(f);
+        return item;
+    }
+
+    public static MusicItem GetMusicItem(GameObject container, Music f)
+    {
+        MusicItem item = NGUITools.AddChild(container, (GameObject)Resources.Load("Prefabs/" + "GameUI/" + "Item-Music")).GetComponent<MusicItem>();
+        item.SetMusic(f);
+        return item;
+    }
 }
