@@ -20,7 +20,8 @@ public class ProfileDetail : MonoBehaviour
 
     void OnDisable()
     {
-        GameManager.Instance.CurGame.StatusChangeHandler -= inviteFriendChange;
+        if (GameManager.Instance)
+            GameManager.Instance.CurGame.StatusChangeHandler -= inviteFriendChange;
     }
 
     void inviteFriendChange()
