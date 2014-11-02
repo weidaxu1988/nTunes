@@ -20,7 +20,8 @@ public class CombatManager : MonoBehaviour
 
     //setting
     public int speed = 2000;
-    public int stringCount = 3;
+    public CombatJoyBtn[] combatButtons;
+    //public int stringCount = 3;
 
     public SongData combatSong;
 
@@ -95,7 +96,7 @@ public class CombatManager : MonoBehaviour
 
     void Start()
     {
-        mHitNoteOnStringIndexThisFrame = new bool[stringCount];
+        mHitNoteOnStringIndexThisFrame = new bool[combatButtons.Length];
         mPlayer.HandleSongFinished += OnSongFinished;
         StartPlay();
     }
@@ -142,12 +143,13 @@ public class CombatManager : MonoBehaviour
     {
         Debug.Log("finished");
         Debug.Log("Load summary Scene");
+        GameManager.Instance.CurGame.Setsummary(mMaxStreak, mStreak, mNumNotesHit, mNumNotesMissed, mScore);
         GameManager.Instance.LoadSummaryScene();
     }
 
     void ResetHasHitNoteOnStringIndexArray()
     {
-        for (int i = 0; i < stringCount; ++i)
+        for (int i = 0; i < combatButtons.Length; ++i)
         {
             mHitNoteOnStringIndexThisFrame[i] = false;
         }

@@ -9,14 +9,17 @@ public class CombatUI : MonoBehaviour
     public UILabel totalHitLabel;
     public UILabel totalMissedLabel;
 
+    public bool autoUpdate;
+
     void Start()
     {
+        if (autoUpdate)
         CombatManager.Instance.valueChangeHandler += OnValueChange;
     }
 
     void OnDestroy()
     {
-        if (CombatManager.Instance)
+        if (autoUpdate && CombatManager.Instance)
             CombatManager.Instance.valueChangeHandler -= OnValueChange;
     }
 
@@ -32,5 +35,17 @@ public class CombatUI : MonoBehaviour
             totalHitLabel.text = CombatManager.Instance.NumNotesHit.ToString();
         if (CombatManager.Instance.NumNotesMissed.ToString() != totalMissedLabel.text)
             totalMissedLabel.text = CombatManager.Instance.NumNotesMissed.ToString();
+    }
+
+    public void SetValue()
+    {
+        if (GameManager.Instance.CurGame.Score.ToString() != scoreLabel.text)
+            scoreLabel.text = GameManager.Instance.CurGame.Score.ToString();
+        if (GameManager.Instance.CurGame.MaxStreak.ToString() != maxStreakLabel.text)
+            maxStreakLabel.text = GameManager.Instance.CurGame.MaxStreak.ToString();
+        if (GameManager.Instance.CurGame.NumNotesHit.ToString() != totalHitLabel.text)
+            totalHitLabel.text = GameManager.Instance.CurGame.NumNotesHit.ToString();
+        if (GameManager.Instance.CurGame.NumNotesMissed.ToString() != totalMissedLabel.text)
+            totalMissedLabel.text = GameManager.Instance.CurGame.NumNotesMissed.ToString();
     }
 }

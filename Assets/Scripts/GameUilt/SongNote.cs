@@ -54,6 +54,7 @@ public class SongNote : MonoBehaviour
             gameObject.SetActive(false);
 
             //add effect
+            CombatManager.Instance.combatButtons[mNote.StringIndex].PlayAnime();
         }
         else if (WasNoteMissed())
         {
